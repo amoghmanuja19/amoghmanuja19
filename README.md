@@ -27,15 +27,7 @@ My work spans **cloud data engineering, distributed processing, ETL/ELT, data wa
 
 <div align="center">
 
-### ☁️ Cloud & Data Platforms
-
-<img src="https://skillicons.dev/icons?i=aws,azure,docker,terraform" />
-
-<br/>
-
-### 🐍 Engineering
-
-<img src="https://skillicons.dev/icons?i=python,postgres,git,github" />
+<img src="https://skillicons.dev/icons?i=aws,azure,docker,terraform,python,postgres,git,github" />
 
 <br/><br/>
 
@@ -50,54 +42,100 @@ My work spans **cloud data engineering, distributed processing, ETL/ELT, data wa
 
 ---
 
-## 🏗️ Featured Project
+## 🚀 Featured Data Engineering Projects
 
 <table>
 <tr>
-<td width="70%">
+<td width="50%" valign="top">
 
-### 🏠 Airbnb End-to-End Data Engineering Pipeline
+### 🏠 Airbnb — Snowflake + dbt
 
-A modern cloud data engineering project built around **AWS S3 + Snowflake + dbt**, demonstrating practical data warehousing and transformation patterns.
+End-to-end analytics engineering pipeline using **S3 → Snowflake → dbt**.
 
-**Highlights**
+**Demonstrates**
+- Medallion architecture
+- Incremental models
+- SCD Type 2 snapshots
+- Jinja/macros
+- Data tests & lineage
+- Dimensional modeling + OBT
 
-- 🥉 Bronze → 🥈 Silver → 🥇 Gold medallion architecture
-- ⚙️ Incremental dbt models
-- 🕒 SCD Type 2 snapshots
-- 🧩 Reusable Jinja/macros
-- 🧪 Data quality & validation tests
-- 🔗 Data lineage and dependency tracking
-- 📊 Dimensional modeling + One Big Table (OBT)
-
-<a href="https://github.com/amoghmanuja19/airbnb_snowflake_dbt_project"><b>→ Explore the project</b></a>
+<a href="https://github.com/amoghmanuja19/airbnb_snowflake_dbt_project"><b>→ View Project</b></a>
 
 </td>
-<td width="30%" align="center">
+<td width="50%" valign="top">
 
-**Pipeline**
+### ⚡ AWS — PySpark Lakehouse
 
-`CSV`
+Production-style batch ETL using **S3 + PySpark + Parquet** with validation and partition-aware processing.
 
-⬇️
+**Demonstrates**
+- Explicit schemas
+- Deduplication
+- Incremental ETL patterns
+- Data quality gates
+- Partitioned Parquet
+- Audit-friendly transformations
 
-`AWS S3`
+<a href="./projects/aws-pyspark-data-lakehouse/"><b>→ View Project</b></a>
 
-⬇️
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-`Snowflake`
+### 📡 Kafka — Spark Streaming — Snowflake
 
-⬇️
+Streaming architecture for machine/event data using **Kafka + Spark Structured Streaming + Snowflake**.
 
-`dbt`
+**Demonstrates**
+- Event-time processing
+- Watermarking
+- Windowed aggregations
+- Checkpointing
+- Streaming schemas
+- Warehouse serving layer
 
-⬇️
+<a href="./projects/kafka-spark-streaming-snowflake/"><b>→ View Project</b></a>
 
-`Analytics`
+</td>
+<td width="50%" valign="top">
+
+### 🛡️ Data Quality & Lineage
+
+Reusable Python quality checks and a lineage model for making pipelines more **observable and operationally reliable**.
+
+**Demonstrates**
+- Schema validation
+- Null & uniqueness checks
+- Accepted-value rules
+- Quality gates
+- Auditability
+- Dataset lineage
+
+<a href="./projects/data-quality-lineage-framework/"><b>→ View Project</b></a>
 
 </td>
 </tr>
 </table>
+
+---
+
+## 🏗️ Portfolio Architecture
+
+```text
+                    DATA ENGINEERING PORTFOLIO
+
+  Sources          Ingestion          Processing          Serving
+     │                 │                  │                  │
+ Files / APIs ──────→ AWS / Kafka ─────→ Spark / PySpark ──→ Snowflake
+     │                 │                  │                  │
+     └────────────────→ S3 / Data Lake ──┘                  └──→ BI
+                              │
+                        Quality + Lineage
+                              │
+                         Monitoring / CI
+```
 
 ---
 
@@ -120,28 +158,11 @@ A modern cloud data engineering project built around **AWS S3 + Snowflake + dbt*
 
 ## 🔧 What I Build
 
-```text
-┌──────────────────────────────────────────────────────────────┐
-│                    DATA ENGINEERING                           │
-├──────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Data Sources → Ingestion → Processing → Storage → Analytics │
-│       │             │            │           │          │     │
-│     APIs          AWS          Spark      Snowflake    BI     │
-│     Files         Kafka        PySpark    S3/ADLS             │
-│                                                              │
-├──────────────────────────────────────────────────────────────┤
-│  Quality • Lineage • Security • Monitoring • CI/CD           │
-└──────────────────────────────────────────────────────────────┘
-```
-
-### Areas I work across
-
 - 🚀 Scalable ETL / ELT pipelines
 - ☁️ AWS cloud data platforms
 - ⚡ Spark & PySpark processing
 - ❄️ Snowflake data warehousing
-- 🔄 Batch & streaming data pipelines
+- 🔄 Batch & streaming pipelines
 - 🧱 Dimensional modeling & SCD Type 2
 - 🔍 Data quality, lineage & observability
 - 📈 Performance optimization
@@ -187,7 +208,5 @@ A modern cloud data engineering project built around **AWS S3 + Snowflake + dbt*
 ---
 
 <div align="center">
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:2563EB,100:0F172A&height=110&section=footer" width="100%"/>
-
 </div>
